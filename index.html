@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InternCrowd</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<i class="fas fa-female"></i> <h1>Intern Crowd</h1>
+		</div>
+		<nav>
+		  <ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#" id="loginBtn">Login/Signup</a></li>
+		  </ul>
+		</nav>
+	</header>  
+
+	<main>
+		<section id="home">
+			<h1>Welcome to InternCrowd!</h1>
+			<p>We connect talented interns with companies looking for skilled candidates.</p>
+		</section>
+
+		<section id="about">
+			<h2>About Us</h2>
+			<p>InternCrowd is an online platform that connects businesses with skilled interns from around the world. Our goal is to help companies find the talent they need to grow, while providing valuable experience to young professionals looking to advance their careers.</p>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<p>If you have any questions or comments, please contact us at <a href="mailto:info@interncrowd.com">info@interncrowd.com</a>.</p>
+		</section>
+	</main>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="form-container">
+				<div class="tabs">
+					<div class="tab active-tab" id="signupTab">Sign Up</div>
+					<div class="tab" id="loginTab">Log In</div>
+				</div>
+				<form class="form active-form" id="signupForm">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required>
+
+					<label for="email">Email Address</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required>
+
+					<button type="submit">Sign Up</button>
+
+					<small>Already have an account? <a href="#" id="loginLink">Log In</a></small>
+				</form>
+
+				<form class="form" id="loginForm">
+					<label for="email2">Email Address</label>
+					<input type="email" id="email2" name="email2" required>
+
+					<label for="password2">Password</label>
+					<input type="password" id="password2" name="password2" required>
+
+					<button type="submit">Log In</button>
+
+					<small>Don't have an account? <a href="#" id="signupLink">Sign Up</a></small>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

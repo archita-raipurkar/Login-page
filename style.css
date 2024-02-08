@@ -1,0 +1,263 @@
+/* General styling */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url("https://i.pinimg.com/736x/4e/1f/df/4e1fdfb8a7eef2adf6c6b8e33f2f00e6.jpg");
+  	background-repeat: no-repeat;
+	  background-size: cover;
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background-image: url("https://www.grssigns.co.uk/wp-content/uploads/web-Header-Background.jpg");
+   background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 10px;
+  }
+  
+  nav a {
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+    position: relative;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+  }
+  
+  nav a::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  nav a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em; 
+  }
+  
+  .logo i {
+    color: rgb(0, 152, 48);
+    font-size: 1.7em; 
+    margin-right: 0.5em; 
+  }
+  
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  header h1 {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  #loginBtn {
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  #loginBtn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  
+  main {
+    padding: 50px;
+  }
+  
+  /* Home section */
+  
+  #home {
+    text-align: center;
+  }
+  
+  /* Modal */
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Form styling */
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .tabs a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #414141;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tabs a:hover {
+    background-color: #ccc;
+    color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .tab {
+    background: linear-gradient(to bottom right, #1eee4e, #5914fb);
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tab:active {
+    transform: translateY(2px);
+}
+
+  
+  .active-tab {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+  }
+  
+  .form {
+    display: none;
+  }
+  
+  .active-form {
+    display: block;
+  }
+  
+  .form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"] {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .form button[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .form small {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .form small a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .form small a:hover {
+    text-decoration: underline;
+  }
+  
